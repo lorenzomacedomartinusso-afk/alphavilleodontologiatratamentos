@@ -1,0 +1,13 @@
+{
+  "name": "alphaville-odontologia-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page para Alphaville Odontologia",
+  "scripts": {
+    "dev": "npx live-server --port=8765"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-tree": "^3.2.1"
+  }
+}
