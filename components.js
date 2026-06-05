@@ -98,7 +98,11 @@
 
     nav.innerHTML = `
       <div class="navbar-inner">
-        <div class="nav-left-spacer"></div>
+        <div class="nav-left-spacer">
+          <a href="${basePath}index.html" class="scrolled-logo-link">
+            <img src="${basePath}logo.png" alt="Alphaville Odontologia" class="scrolled-logo" />
+          </a>
+        </div>
         <div class="nav-links-desktop">
           ${linksHTML}
         </div>
@@ -108,9 +112,7 @@
             Agendar Consulta
           </a>
           <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
           </button>
         </div>
       </div>
