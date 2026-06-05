@@ -13,7 +13,7 @@
 
   function isActive(href) {
     const hrefFile = href.split('/').pop();
-    if (hrefFile === 'index.html' && (currentPath === 'index.html' || currentPath === '' || currentPath === '/')) return true;
+    if ((hrefFile === 'index.html' || hrefFile === '') && (currentPath === 'index.html' || currentPath === '' || currentPath === '/')) return true;
     return currentPath === hrefFile;
   }
 
@@ -43,7 +43,7 @@
     ];
 
     const navLinks = [
-      { href: `${basePath}index.html`, label: 'Home' },
+      { href: `/`, label: 'Home' },
       { href: `${basePath}sobre-o-doutor.html`, label: 'Sobre o Doutor' },
       { href: `${basePath}tratamentos.html`, label: 'Tratamentos', dropdown: tratamentosLinks },
       { href: `${basePath}pacientes.html`, label: 'Pacientes' },
@@ -99,7 +99,7 @@
     nav.innerHTML = `
       <div class="navbar-inner">
         <div class="nav-left-spacer">
-          <a href="${basePath}index.html" class="scrolled-logo-link">
+          <a href="/" class="scrolled-logo-link">
             <img src="${basePath}logo.png" alt="Alphaville Odontologia" class="scrolled-logo" />
           </a>
         </div>
@@ -189,7 +189,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col footer-brand-col">
-            <a href="${basePath}index.html">
+            <a href="/">
               <img src="${basePath}logo.png" alt="Alphaville Odontologia" class="site-footer-logo" />
             </a>
             <p class="footer-desc">Atendimento odontológico de excelência 24 horas em Alphaville. Emergências, tratamentos estéticos e clínico geral com Dr. Eduardo Martinusso.</p>
@@ -204,7 +204,7 @@
           </div>
           <div class="footer-col">
             <h4 class="footer-col-title">Navegação</h4>
-            <a href="${basePath}index.html" class="footer-nav-link">Home</a>
+            <a href="/" class="footer-nav-link">Home</a>
             <a href="${basePath}sobre-o-doutor.html" class="footer-nav-link">Sobre o Doutor</a>
             <a href="${basePath}tratamentos.html" class="footer-nav-link">Tratamentos</a>
             <a href="${basePath}pacientes.html" class="footer-nav-link">Pacientes</a>
