@@ -34,33 +34,27 @@
   padding: 0 32px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 80px;
   gap: 16px;
 }
 
-.navbar-logo-link {
-  flex-shrink: 0;
+.nav-left-spacer {
+  flex: 1;
+}
+
+.nav-right-actions {
+  flex: 1;
   display: flex;
   align-items: center;
-}
-
-.navbar-logo {
-  height: 65px;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-  transition: transform 0.3s ease;
-}
-
-.navbar-logo:hover {
-  transform: scale(1.05);
+  justify-content: flex-end;
+  gap: 16px;
 }
 
 /* Desktop Navigation Links */
 .nav-links-desktop {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
 }
 
