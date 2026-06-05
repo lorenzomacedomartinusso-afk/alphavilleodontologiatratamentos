@@ -13,7 +13,7 @@
 
   function isActive(href) {
     const hrefFile = href.split('/').pop();
-    if ((hrefFile === 'index.html' || hrefFile === '') && (currentPath === 'index.html' || currentPath === '' || currentPath === '/')) return true;
+    if ((hrefFile === 'index.html' || hrefFile === '') && (currentPath === 'index.html' || currentPath === '' || currentPath === '/' || currentPath === 'home')) return true;
     return currentPath === hrefFile;
   }
 
