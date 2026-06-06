@@ -107,14 +107,14 @@
 }
 
 .scrolled-logo {
-  height: 95px; /* Increased size significantly */
+  height: 85px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .scrolled-logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.35);
 }
 
 .nav-right-actions {

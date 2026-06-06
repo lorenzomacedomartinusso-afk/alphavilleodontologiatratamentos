@@ -100,7 +100,7 @@
       <div class="navbar-inner">
         <div class="nav-left-spacer">
           <a href="/" class="scrolled-logo-link">
-            <img src="${basePath}logo.png" alt="Alphaville Odontologia" class="scrolled-logo" />
+            <img src="${basePath}logo-scrolled.png" alt="Alphaville Odontologia" class="scrolled-logo" />
           </a>
         </div>
         <div class="nav-glass-wrap">
