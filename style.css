@@ -1814,6 +1814,15 @@ a { text-decoration: none; color: inherit; }
   /* Footer */
   .footer-inner { flex-direction: column; gap: 30px; text-align: center; }
   .footer-links { justify-content: center; gap: 15px; }
+
+  /* Contact layout fix */
+  .contact-items { flex-direction: column; align-items: center; }
+  .contact-divider-v {
+    width: 80px;
+    height: 1px;
+    min-height: 1px;
+    margin: 20px auto;
+  }
 }
 
 @media (max-width: 480px) {
