@@ -345,8 +345,9 @@
 }
 
 .mobile-nav-logo {
-  height: 85px;
+  height: 95px;
   width: auto;
+  max-width: 80%;
 }
 
 .mobile-nav-close {
