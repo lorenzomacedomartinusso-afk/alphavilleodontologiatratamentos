@@ -39,11 +39,56 @@
   gap: 16px;
 }
 
-.nav-left-spacer {
-  flex: 1.5; /* Pushes the center items more to the right */
+/* Nav glass wrapper – groups links + CTA */
+.nav-glass-wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Moved to the left */
+  gap: 4px;
+  padding: 0;
+  border-radius: 50px;
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
+  backdrop-filter: blur(0px) saturate(100%);
+  -webkit-backdrop-filter: blur(0px) saturate(100%);
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              backdrop-filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              -webkit-backdrop-filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Desktop-only floating glassmorphism when NOT scrolled */
+@media (min-width: 769px) {
+  .site-navbar:not(.scrolled) .nav-glass-wrap {
+    background: rgba(1, 14, 48, 0.45);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-color: rgba(249, 189, 123, 0.15);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    padding: 6px 8px 6px 20px;
+  }
+
+  .site-navbar.scrolled .nav-glass-wrap {
+    background: transparent;
+    border-color: transparent;
+    border-radius: 0;
+    box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
+    backdrop-filter: blur(0px) saturate(100%);
+    -webkit-backdrop-filter: blur(0px) saturate(100%);
+    padding: 0;
+  }
+}
+
+.nav-left-spacer {
+  flex: 2.5; /* Pushes the nav glass wrap further to the right */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .scrolled-logo-link {
@@ -90,10 +135,10 @@
 
 .nav-link {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
-  padding: 8px 16px;
+  padding: 7px 12px;
   border-radius: 8px;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -191,12 +236,12 @@
 .nav-cta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
+  gap: 7px;
+  padding: 8px 18px;
   background: linear-gradient(135deg, #F9BD7B, #e0a04e);
   color: #010E30;
   font-family: 'Outfit', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   border-radius: 50px;
   transition: all 0.3s ease;

@@ -208,7 +208,7 @@ a { text-decoration: none; color: inherit; }
    ============================================ */
 .hero-section {
   position: relative;
-  min-height: 750px; /* Restaurado para 750px conforme solicitado */
+  min-height: 820px; /* Increased to accommodate floating nav menu */
   background: radial-gradient(at center center, #010E30 0%, #030816 100%);
   overflow: hidden;
   display: flex;
@@ -555,8 +555,8 @@ a { text-decoration: none; color: inherit; }
 .doctor-photo-wrap {
   position: absolute;
   right: -3%; 
-  bottom: -130px; /* Restaurado para -130px para garantir que a cabeça não seja cortada */
-  width: 780px; 
+  bottom: -180px; /* Lowered so the floating nav doesn't cut the doctor's head */
+  width: 850px; /* Increased to fill taller hero without floating */
   height: auto;
   z-index: 1; 
 }
