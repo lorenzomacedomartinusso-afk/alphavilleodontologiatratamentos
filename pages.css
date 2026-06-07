@@ -1,10 +1,10 @@
 /* ============================================
-   PAGES.CSS – Alphaville Odontologia
+   PAGES.CSS â€“ Alphaville Odontologia
    Styles for Navbar, Footer, and All New Pages
    ============================================ */
 
 /* ============================================
-   NAVBAR – Glassmorphism Premium
+   NAVBAR â€“ Glassmorphism Premium
    ============================================ */
 .site-navbar {
   position: fixed;
@@ -39,7 +39,7 @@
   gap: 16px;
 }
 
-/* Nav glass wrapper – groups links + CTA */
+/* Nav glass wrapper â€“ groups links + CTA */
 .nav-glass-wrap {
   display: flex;
   align-items: center;
@@ -434,7 +434,7 @@
 }
 
 /* ============================================
-   FOOTER – Premium Expanded
+   FOOTER â€“ Premium Expanded
    ============================================ */
 .site-footer {
   background: #000a1e;
@@ -596,7 +596,7 @@
 }
 
 /* ============================================
-   PAGE HERO BANNER – Internal Pages
+   PAGE HERO BANNER â€“ Internal Pages
    ============================================ */
 .page-hero {
   position: relative;
@@ -688,7 +688,7 @@
 }
 
 /* ============================================
-   CONTENT SECTIONS – Internal Pages
+   CONTENT SECTIONS â€“ Internal Pages
    ============================================ */
 .page-section {
   padding: 80px 0;
@@ -776,7 +776,7 @@
 }
 
 /* ============================================
-   TREATMENT PAGE – Layout with Sidebar
+   TREATMENT PAGE â€“ Layout with Sidebar
    ============================================ */
 .treatment-layout {
   display: grid;
@@ -1148,7 +1148,7 @@
 }
 
 /* ============================================
-   BLOG – Cards & Article
+   BLOG â€“ Cards & Article
    ============================================ */
 .blog-grid {
   display: grid;
@@ -1227,44 +1227,154 @@
   gap: 10px;
 }
 
-/* Blog Article */
-.article-content {
-  max-width: 760px;
+/* Blog Article - Novo Layout Profissional */
+.article-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 60px;
+  max-width: 1100px;
   margin: 0 auto;
+  align-items: start;
+}
+
+.article-main {
+  min-width: 0;
+}
+
+.article-hero-cover {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .article-content h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: #010E30;
-  margin: 40px 0 16px;
+  margin: 48px 0 20px;
+  letter-spacing: -0.5px;
+}
+
+.article-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #010E30;
+  margin: 32px 0 16px;
 }
 
 .article-content p {
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   line-height: 1.85;
   color: #444;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.article-content ul, .article-content ol {
+  margin: 0 0 32px 24px;
+}
+
+.article-content li {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.article-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 32px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
 .article-meta {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 40px;
+  gap: 16px;
+  margin-bottom: 32px;
   padding-bottom: 24px;
   border-bottom: 1px solid rgba(1, 14, 48, 0.08);
 }
 
-.article-author-name {
-  font-weight: 700;
-  color: #010E30;
-  font-size: 0.95rem;
+.article-date {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
 }
 
-.article-date {
-  font-size: 0.85rem;
-  color: #888;
+/* Featured Blog Post */
+.blog-featured-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  margin-bottom: 60px;
+  border: 1px solid rgba(1, 14, 48, 0.05);
+  transition: transform 0.3s;
+}
+
+.blog-featured-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-featured-img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+}
+
+.blog-featured-content {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-featured-content .blog-card-category {
+  margin-bottom: 16px;
+}
+
+.blog-featured-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #010E30;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.blog-featured-excerpt {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Sidebar Responsive */
+@media (max-width: 992px) {
+  .article-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .blog-featured-card {
+    grid-template-columns: 1fr;
+  }
+  .blog-featured-img {
+    height: 300px;
+    min-height: auto;
+  }
+  .blog-featured-content {
+    padding: 32px;
+  }
+  .blog-featured-title {
+    font-size: 1.6rem;
+  }
 }
 
 /* ============================================
@@ -1400,7 +1510,7 @@
 }
 
 /* ============================================
-   PATIENT GALLERY – Masonry
+   PATIENT GALLERY â€“ Masonry
    ============================================ */
 .gallery-masonry {
   columns: 3;
@@ -1428,7 +1538,7 @@
 }
 
 /* ============================================
-   SOBRE O DOUTOR – Special Sections
+   SOBRE O DOUTOR â€“ Special Sections
    ============================================ */
 .doctor-profile-grid {
   display: grid;
@@ -1516,7 +1626,7 @@
 }
 
 /* ============================================
-   CTA SECTION – Reusable
+   CTA SECTION â€“ Reusable
    ============================================ */
 .cta-section {
   background: linear-gradient(135deg, #010E30 0%, #030816 100%);
@@ -1599,7 +1709,7 @@
 }
 
 /* ============================================
-   TREATMENT HUB – Large Cards
+   TREATMENT HUB â€“ Large Cards
    ============================================ */
 .treatments-hub-grid {
   display: grid;
@@ -1686,7 +1796,7 @@
 }
 
 /* ============================================
-   REVIEWS SECTION – For pacientes page
+   REVIEWS SECTION â€“ For pacientes page
    ============================================ */
 .reviews-full-grid {
   display: grid;
@@ -1695,7 +1805,202 @@
 }
 
 /* ============================================
-   RESPONSIVE – All New Pages
+   RESPONSIVE â€“ All New Pages
+   ============================================ */
+@media (max-width: 1024px) {
+  .treatment-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .doctor-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .doctor-profile-img-wrap {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .doctor-usp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar mobile */
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .nav-cta-btn {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .navbar-inner {
+    height: 90px;
+    padding: 0 20px;
+  }
+
+  .scrolled-logo {
+    height: 85px;
+  }
+
+  /* Page Hero */
+  .page-hero {
+    padding: 120px 0 50px;
+  }
+
+  .page-hero-title {
+    font-size: 1.8rem;
+  }
+
+  /* Content */
+  .contact-grid-page {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .gallery-masonry {
+    columns: 2;
+    column-gap: 12px;
+  }
+
+  .gallery-item {
+    margin-bottom: 12px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-full-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+
+  .treatments-hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    padding: 110px 0 40px;
+  }
+
+  .page-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .gallery-masonry {
+    columns: 1;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 24px;
+  }
+}
+
+/* ============================================
+  height: 80px;
+  background: linear-gradient(135deg, rgba(1, 14, 48, 0.06), rgba(1, 14, 48, 0.02));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.treatment-hub-icon svg {
+  width: 44px;
+  height: 44px;
+}
+
+.treatment-hub-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #010E30;
+  margin-bottom: 10px;
+}
+
+.treatment-hub-desc {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.treatment-hub-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #F9BD7B;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s;
+}
+
+.treatment-hub-link:hover {
+  gap: 10px;
+}
+
+/* ============================================
+   REVIEWS SECTION â€“ For pacientes page
+   ============================================ */
+.reviews-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* ============================================
+   RESPONSIVE â€“ All New Pages
    ============================================ */
 @media (max-width: 1024px) {
   .treatment-layout {
@@ -1842,4 +2147,147 @@
    ============================================ */
 body.has-navbar {
   /* Applied on internal pages only (not home, where hero takes full viewport) */
+}
+
+/* ============================================
+   BLOG LAYOUT
+   ============================================ */
+.blog-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.blog-featured-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid rgba(1, 14, 48, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-featured-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border-color: rgba(249, 189, 123, 0.4);
+}
+
+.blog-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 350px;
+}
+
+.blog-featured-content {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-featured-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #010E30;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.blog-featured-excerpt {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid rgba(1, 14, 48, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(249, 189, 123, 0.4);
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-card-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card-category {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #F9BD7B;
+  margin-bottom: 12px;
+}
+
+.blog-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #010E30;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.blog-card-excerpt {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .blog-featured-card {
+    grid-template-columns: 1fr;
+  }
+  .blog-featured-img {
+    height: 250px;
+    min-height: auto;
+  }
+  .blog-featured-content {
+    padding: 30px;
+  }
 }
