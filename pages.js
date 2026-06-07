@@ -145,4 +145,158 @@ document.addEventListener('DOMContentLoaded', function () {
     counters.forEach(c => counterObserver.observe(c));
   }
 
+  // ======================================
+  // 7. CAROUSEL INIT
+  // ======================================
+  function initCarousel(trackId, prevId, nextId, dotsId, opts = {}) {
+    const track = document.getElementById(trackId);
+    const outer = track ? track.parentElement : null;
+    const prevBtn = document.getElementById(prevId);
+    const nextBtn = document.getElementById(nextId);
+    const dotsContainer = document.getElementById(dotsId);
+
+    if (!track || !outer) return;
+
+    const slides = track.querySelectorAll('.carousel-slide');
+    if (slides.length === 0) return;
+
+    let current = 0;
+    let autoplayInterval = null;
+    let isVisible = false;
+    let cachedSlidesVisible = getSlidesVisible();
+    let dots = [];
+
+    function getSlidesVisible() {
+      const outerW = outer.clientWidth;
+      if (outerW < 500) return 1;
+      if (outerW < 800) return 2;
+      return opts.visibleDesktop || 3;
+    }
+
+    function setSlideWidths() {
+      cachedSlidesVisible = getSlidesVisible();
+      const w = (100 / cachedSlidesVisible) + '%';
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.width = w;
+      }
+    }
+
+    function totalPositions() {
+      return Math.max(0, slides.length - cachedSlidesVisible);
+    }
+
+    function goTo(index, isManual = false) {
+      const total = totalPositions();
+      current = Math.max(0, Math.min(index, total));
+      const slideW = 100 / cachedSlidesVisible;
+      track.style.transform = `translate3d(-${current * slideW}%, 0, 0)`;
+      updateDotsState(isManual);
+    }
+
+    function buildDots() {
+      if (!dotsContainer) return;
+      const total = totalPositions();
+      dotsContainer.innerHTML = '';
+      dots = [];
+      for (let i = 0; i <= total; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'dot' + (i === current ? ' active' : '');
+        const idx = i;
+        dot.addEventListener('click', () => {
+          stopAutoplay();
+          goTo(idx, true);
+          if (isVisible) startAutoplay();
+        });
+        dotsContainer.appendChild(dot);
+        dots.push(dot);
+      }
+    }
+
+    function updateDotsState(isManual) {
+      for (let i = 0; i < dots.length; i++) {
+        if (i === current) {
+          dots[i].classList.add('active');
+          if (window.innerWidth < 768 && isManual) {
+            dots[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }
+        } else {
+          dots[i].classList.remove('active');
+        }
+      }
+    }
+
+    function startAutoplay() {
+      if (opts.autoplay === false) return;
+      stopAutoplay();
+      autoplayInterval = setInterval(() => {
+        const total = totalPositions();
+        goTo(current >= total ? 0 : current + 1, false);
+      }, 5000);
+    }
+
+    function stopAutoplay() { 
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+        autoplayInterval = null;
+      }
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) startAutoplay();
+        else stopAutoplay();
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(outer);
+
+    setSlideWidths();
+    buildDots();
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { 
+      stopAutoplay(); 
+      goTo(current - 1, true); 
+      if (isVisible) startAutoplay(); 
+    });
+    if (nextBtn) nextBtn.addEventListener('click', () => { 
+      stopAutoplay(); 
+      goTo(current + 1, true); 
+      if (isVisible) startAutoplay(); 
+    });
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    outer.addEventListener('touchstart', e => { 
+      touchStartX = e.touches[0].clientX; 
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    
+    outer.addEventListener('touchend', e => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const touchEndY = e.changedTouches[0].clientY;
+      const diffX = touchStartX - touchEndX;
+      const diffY = touchStartY - touchEndY;
+
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        stopAutoplay();
+        goTo(diffX > 0 ? current + 1 : current - 1, true);
+        if (isVisible) startAutoplay();
+      }
+    }, { passive: true });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        setSlideWidths();
+        buildDots();
+        goTo(Math.min(current, totalPositions()), false);
+      }, 150);
+    }, { passive: true });
+  }
+
+  initCarousel('patients-track',  'patients-prev',  'patients-next',  'patients-dots',  { visibleDesktop: 3 });
+  initCarousel('reviews-track',   'reviews-prev',   'reviews-next',   'reviews-dots',   { visibleDesktop: 3 });
+
 });
