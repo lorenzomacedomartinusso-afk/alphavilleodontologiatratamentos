@@ -1625,7 +1625,7 @@ a { text-decoration: none; color: inherit; }
     order: 10; 
     bottom: auto;
     right: auto;
-    margin-top: -100px;
+    margin-top: -40px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -1659,8 +1659,8 @@ a { text-decoration: none; color: inherit; }
   .ring-2 { width: 120%; height: 120%; top: 55%; }
 
   .doctor-photo {
-    width: 170%;
-    max-width: 900px;
+    width: 110%;
+    max-width: 500px;
     margin: 0 auto;
     filter: drop-shadow(0 15px 35px rgba(0,0,0,0.6));
     margin-bottom: 0; 

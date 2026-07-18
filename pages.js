@@ -298,5 +298,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   initCarousel('patients-track',  'patients-prev',  'patients-next',  'patients-dots',  { visibleDesktop: 3 });
   initCarousel('reviews-track',   'reviews-prev',   'reviews-next',   'reviews-dots',   { visibleDesktop: 3 });
+  initCarousel('estrutura-track',  'estrutura-prev',  'estrutura-next',  'estrutura-dots',  { visibleDesktop: 2 });
 
 });
