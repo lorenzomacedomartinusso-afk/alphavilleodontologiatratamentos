@@ -1665,6 +1665,60 @@
 }
 
 /* ============================================
+   LP BENEFITS GRID
+   ============================================ */
+.lp-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0 0;
+}
+
+.lp-benefit-card {
+  background: #fff;
+  border: 1px solid rgba(1, 14, 48, 0.06);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lp-benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.lp-benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(249, 189, 123, 0.12);
+  border-radius: 50%;
+  margin-bottom: 18px;
+}
+
+.lp-benefit-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.lp-benefit-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #010E30;
+  margin-bottom: 8px;
+}
+
+.lp-benefit-card p {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================
    SCROLL TO TOP BUTTON
    ============================================ */
 .scroll-top-btn {
@@ -2356,5 +2410,19 @@ body.has-sticky-cta .scroll-top-btn {
   }
   .lp-hero-inner {
     padding: 100px 16px 140px;
+  }
+}
+
+/* LP Benefits Responsiveness */
+@media (max-width: 900px) {
+  .lp-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lp-benefits-grid {
+    grid-template-columns: 1fr;
   }
 }
