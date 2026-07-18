@@ -2389,6 +2389,49 @@ body.has-sticky-cta .scroll-top-btn {
   bottom: 155px !important;
 }
 
+/* ============================================
+   CTA FINAL SECTION
+   ============================================ */
+.lp-cta-final-section {
+  position: relative;
+  padding: 100px 0;
+  background-color: #010E30;
+  overflow: hidden;
+}
+
+.lp-cta-final-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #010E30 0%, #02143d 100%);
+  z-index: 1;
+}
+
+.lp-cta-final-content {
+  position: relative;
+  z-index: 2;
+}
+
+.lp-cta-final-sub {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+.lp-cta-final-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
 /* ---- LP RESPONSIVE ---- */
 @media (max-width: 1024px) {
   .lp-hero-inner {
