@@ -2327,7 +2327,12 @@ body.has-navbar {
 
 /* Push WhatsApp float up so it doesn't overlap sticky CTA */
 body.has-sticky-cta .whatsapp-float {
-  bottom: 120px !important;
+  bottom: 90px !important;
+}
+
+/* Push scroll-top button above WhatsApp when sticky CTA is active */
+body.has-sticky-cta .scroll-top-btn {
+  bottom: 155px !important;
 }
 
 /* ---- LP RESPONSIVE ---- */
