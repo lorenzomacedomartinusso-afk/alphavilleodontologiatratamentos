@@ -1625,11 +1625,11 @@ a { text-decoration: none; color: inherit; }
     order: 10; 
     bottom: auto;
     right: auto;
-    margin-top: -40px;
+    margin-top: -180px;
     display: flex;
     justify-content: center;
     width: 100%;
-    overflow: visible; 
+    overflow: hidden; 
     z-index: 1;
   }
 
@@ -1659,13 +1659,13 @@ a { text-decoration: none; color: inherit; }
   .ring-2 { width: 120%; height: 120%; top: 55%; }
 
   .doctor-photo {
-    width: 110%;
-    max-width: 500px;
+    width: 170%;
+    max-width: 900px;
     margin: 0 auto;
     filter: drop-shadow(0 15px 35px rgba(0,0,0,0.6));
-    margin-bottom: 0; 
+    margin-bottom: -10px; 
     z-index: 1;
-    transform: translateX(10px);
+    transform: translateY(20px) translateX(20px);
   }
 
   /* Sections */
