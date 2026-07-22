@@ -339,10 +339,17 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.mobile-nav-logo-link {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+}
+
 .mobile-nav-logo {
   height: 95px;
   width: auto;
-  max-width: 80%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .mobile-nav-close {

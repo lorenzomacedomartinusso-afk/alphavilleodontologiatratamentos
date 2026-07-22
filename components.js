@@ -32,6 +32,7 @@
     nav.id = 'site-navbar';
 
     const tratamentosLinks = [
+      { href: `${basePath}tratamentos.html`, label: 'Visão Geral' },
       { href: `${basePath}tratamentos/emergencia-24h.html`, label: 'Emergência 24h' },
       { href: `${basePath}tratamentos/clinico-geral.html`, label: 'Clínico Geral' },
       { href: `${basePath}tratamentos/odontologia-estetica.html`, label: 'Odontologia Estética' },
@@ -121,7 +122,9 @@
       <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
       <div class="mobile-nav-panel" id="mobile-nav-panel">
         <div class="mobile-nav-header">
-          <img src="${basePath}logo-scrolled.png" alt="Alphaville Odontologia" class="mobile-nav-logo" />
+          <a href="/" class="mobile-nav-logo-link">
+            <img src="${basePath}logo-scrolled.png" alt="Alphaville Odontologia" class="mobile-nav-logo" />
+          </a>
           <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Fechar menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
