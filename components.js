@@ -170,8 +170,7 @@
     const mobileGroups = panel.querySelectorAll('.mobile-nav-group');
     mobileGroups.forEach(group => {
       const link = group.querySelector('.mobile-nav-link');
-      const arrow = link.querySelector('.dropdown-arrow');
-      arrow.addEventListener('click', (e) => {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         group.classList.toggle('open');
