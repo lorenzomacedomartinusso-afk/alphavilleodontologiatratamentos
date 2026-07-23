@@ -29,6 +29,49 @@
       #lp-hero { display: none !important; }
       #hero-mobile { display: flex !important; }
     }
+    .hero-img-desktop {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right 20%;
+      opacity: 1;
+    }
+    @media (min-width: 1600px) {
+      .hero-img-desktop {
+        object-position: right 40%;
+        transform: scale(1.1) translateY(-2%);
+      }
+      #lp-hero {
+        height: auto !important;
+        min-height: auto !important;
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
+      }
+      #lp-hero .container {
+        height: auto !important;
+        padding-bottom: 0 !important;
+      }
+      .hero-content-wrapper {
+        max-width: 700px !important;
+      }
+      .hero-content-wrapper > img {
+        width: 360px !important;
+      }
+      .hero-content-wrapper h1 {
+        font-size: 4.2rem !important;
+      }
+      .hero-content-wrapper p {
+        font-size: 1.25rem !important;
+        max-width: 550px !important;
+      }
+      .hero-content-wrapper a[target="_blank"] {
+        font-size: 1.1rem !important;
+        padding: 20px 40px !important;
+      }
+      .hero-content-wrapper a[href="#como-funciona"] {
+        font-size: 1rem !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -128,17 +171,17 @@
   <section id="lp-hero" style="position: relative; width: 100%; height: 100vh; min-height: 600px; background-color: #020B1C; overflow: hidden;">
 
     <!-- Imagem de Fundo (Doutor) ocupando a tela, alinhada à direita -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; overflow: hidden;">
       <picture>
         <source media="(min-width: 1600px)" srcset="../hero%20implantes%2022%2B.png">
-        <img src="../hero_bg_doctor.png" alt="Dr. Eduardo Martinusso" style="width: 100%; height: 100%; object-fit: cover; object-position: right 20%; opacity: 1;" />
+        <img src="../hero_bg_doctor.png" alt="Dr. Eduardo Martinusso" class="hero-img-desktop" />
       </picture>
     </div>
 
     <!-- Conteúdo Esquerda -->
     <div class="container" style="position: relative; z-index: 5; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-bottom: 80px;">
       
-      <div style="max-width: 600px;">
+      <div class="hero-content-wrapper" style="max-width: 600px;">
         <!-- Logo -->
         <img src="../logo.png" alt="Alphaville Odontologia - Dr. Eduardo Martinusso" style="width: 300px; max-width: 100%; margin-bottom: 30px; position: relative; top: 40px;" />
 
