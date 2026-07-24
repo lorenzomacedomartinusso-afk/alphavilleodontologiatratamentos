@@ -21,6 +21,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <!-- Preload imagens essenciais -->
+  <link rel="preload" as="image" href="doctor_main.png" />
+  <link rel="preload" as="image" href="logo.png" />
+  <link rel="preload" as="image" href="logo-scrolled.png" />
+  <link rel="preload" as="image" href="doctor_office_novo.png" />
+  <link rel="preload" as="image" href="prime_patient_1.png" />
+  <link rel="preload" as="image" href="prime_patient_2.jpg" />
+  <link rel="preload" as="image" href="prime_patient_4.jpg" />
+  <link rel="preload" as="image" href="dr_eduardo.png" />
+  <link rel="preload" as="image" href="dr_luis.jpg" />
+  <link rel="preload" as="image" href="dra_clery.jpg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="pages.css" />
 </head>
@@ -39,7 +50,7 @@
         <div class="bg-ring ring-2"></div>
         <div class="bg-particles"></div>
       </div>
-      <img src="doctor_main.png" alt="Dr. Eduardo Martinusso – Dentista Alphaville" class="doctor-photo" />
+      <img src="doctor_main.png" alt="Dr. Eduardo Martinusso – Dentista Alphaville" class="doctor-photo" fetchpriority="high" />
     </div>
 
     <div class="hero-inner">
@@ -186,17 +197,17 @@
             <div class="carousel-track" id="patients-track">
               <div class="carousel-slide">
                 <div class="patient-card">
-                  <img src="prime_patient_1.png" alt="Paciente Alphaville Odontologia" class="patient-img" loading="lazy" />
+                  <img src="prime_patient_1.png" alt="Paciente Alphaville Odontologia" class="patient-img" />
                 </div>
               </div>
               <div class="carousel-slide">
                 <div class="patient-card">
-                  <img src="prime_patient_2.jpg" alt="Paciente Alphaville Odontologia" class="patient-img" loading="lazy" />
+                  <img src="prime_patient_2.jpg" alt="Paciente Alphaville Odontologia" class="patient-img" />
                 </div>
               </div>
               <div class="carousel-slide">
                 <div class="patient-card">
-                  <img src="prime_patient_4.jpg" alt="Paciente com Dr. Eduardo Martinusso" class="patient-img" loading="lazy" />
+                  <img src="prime_patient_4.jpg" alt="Paciente com Dr. Eduardo Martinusso" class="patient-img" />
                 </div>
               </div>
               <div class="carousel-slide">
@@ -726,7 +737,7 @@
         <!-- Dr. Eduardo Martinusso -->
         <div class="team-card-modern">
           <div class="team-image-container">
-            <img src="dr_eduardo.png" alt="Dr. Eduardo Martinusso" class="team-photo-modern" loading="lazy" />
+            <img src="dr_eduardo.png" alt="Dr. Eduardo Martinusso" class="team-photo-modern" />
           </div>
           <div class="team-info-modern">
             <h3 class="team-name-modern">Dr. Eduardo Martinusso</h3>
@@ -743,7 +754,7 @@
         <!-- Dr. Luis Marcos Carrijo -->
         <div class="team-card-modern">
           <div class="team-image-container">
-            <img src="dr_luis.jpg" alt="Dr. Luis Marcos Carrijo" class="team-photo-modern" loading="lazy" />
+            <img src="dr_luis.jpg" alt="Dr. Luis Marcos Carrijo" class="team-photo-modern" />
           </div>
           <div class="team-info-modern">
             <h3 class="team-name-modern">Dr. Luis Marcos Carrijo</h3>
@@ -759,7 +770,7 @@
         <!-- Dra. Clery Saad Abboud -->
         <div class="team-card-modern">
           <div class="team-image-container">
-            <img src="dra_clery.jpg" alt="Dra. Clery Saad Abboud" class="team-photo-modern" loading="lazy" />
+            <img src="dra_clery.jpg" alt="Dra. Clery Saad Abboud" class="team-photo-modern" />
           </div>
           <div class="team-info-modern">
             <h3 class="team-name-modern">Dra. Clery Saad Abboud</h3>
