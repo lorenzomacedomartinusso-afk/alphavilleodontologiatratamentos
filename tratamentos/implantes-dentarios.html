@@ -21,9 +21,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../pages.css" />
+  <link rel="stylesheet" href="../style.css?v=2" />
+  <link rel="stylesheet" href="../pages.css?v=2" />
   <style>
+    /* Força remoção de qualquer linha intrusa entre Resultados e Quem Somos */
+    #resultados, #quem-somos { 
+      border: none !important; 
+      box-shadow: none !important; 
+      outline: none !important;
+      /* Desativa content-visibility que cria linhas de contenção visíveis */
+      content-visibility: visible !important;
+      contain-intrinsic-size: auto !important;
+      contain: none !important;
+    }
+    #resultados::after, #resultados::before,
+    #quem-somos::after, #quem-somos::before { 
+      display: none !important; 
+      content: none !important;
+    }
+    /* Remove a linha do section-divider dentro de quem-somos */
+    #quem-somos .section-divider {
+      border: none !important;
+      border-top: none !important;
+      height: 0 !important;
+      margin: 40px 0 !important;
+    }
     #hero-mobile { display: none; }
     @media (max-width: 768px) {
       #lp-hero { display: none !important; }

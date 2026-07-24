@@ -1489,6 +1489,20 @@ a { text-decoration: none; color: inherit; }
 [data-aos="fade-left"] { transform: translate3d(30px, 0, 0); }
 [data-aos="fade-left"].aos-animate { transform: translate3d(0, 0, 0); }
 
+/* Remove unwanted horizontal borders between sections on desktop */
+#quem-somos, #resultados, #quem-somos .container, #resultados .container, 
+#resultados .reviews-cta, #quem-somos .about-grid, #quem-somos .about-text { 
+  border-top: none !important; 
+  border-bottom: none !important; 
+  box-shadow: none !important;
+  outline: none !important;
+}
+#quem-somos::before, #quem-somos::after,
+#resultados::before, #resultados::after {
+  display: none !important;
+  content: none !important;
+}
+
 .section-light, .section-dark, .section-contact, .section-footer-map {
   content-visibility: auto;
   contain-intrinsic-size: 1px 500px;
