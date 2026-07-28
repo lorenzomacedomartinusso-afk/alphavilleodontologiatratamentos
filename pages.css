@@ -199,6 +199,16 @@
   pointer-events: none;
 }
 
+/* Bridge the hover gap */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -15px; /* Cover the gap to the navbar trigger */
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
+
 .nav-item-dropdown:hover .nav-dropdown {
   opacity: 1;
   visibility: visible;
