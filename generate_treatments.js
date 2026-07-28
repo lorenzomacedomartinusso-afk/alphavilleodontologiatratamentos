@@ -41,7 +41,7 @@ function makePage(t) {
   <meta property="og:title" content="${t.metaTitle}" />
   <meta property="og:description" content="${t.metaDesc}" />
   <title>${t.metaTitle}</title>
-  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="${fontsUrl}" rel="stylesheet" />

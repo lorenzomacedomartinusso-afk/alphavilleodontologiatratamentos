@@ -1295,7 +1295,7 @@ a { text-decoration: none; color: inherit; }
 .section-contact {
   position: relative;
   padding: 100px 0;
-  background-image: url('city_bg.png');
+  background-image: url('assets/images/city_bg.png');
   background-size: cover;
   background-position: center;
   overflow: hidden;

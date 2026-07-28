@@ -51,6 +51,9 @@ const replacements = {
     'â€¢': '•',
     'â€°': '›', // As seen in screenshot Home â€° Sobre
     'Ã\x81': 'Á', // C3 81
+    'â˜…': '★',
+    'â†': '→',
+    'â†’': '→'
 };
 
 function walk(dir) {
