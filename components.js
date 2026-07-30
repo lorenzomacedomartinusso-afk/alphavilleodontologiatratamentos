@@ -8,7 +8,7 @@
 
   // ── Detect current page for active nav link ──
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const isSubDir = window.location.pathname.includes('/tratamentos/') || window.location.pathname.includes('/blog/');
+  const isSubDir = window.location.pathname.includes('/tratamentos/');
   const basePath = isSubDir ? '../' : '';
 
   function isActive(href) {
@@ -48,7 +48,6 @@
       { href: `${basePath}sobre-o-doutor.html`, label: 'Sobre o Doutor' },
       { href: `${basePath}tratamentos.html`, label: 'Tratamentos', dropdown: tratamentosLinks },
       { href: `${basePath}pacientes.html`, label: 'Pacientes' },
-      { href: `${basePath}blog.html`, label: 'Blog' },
       { href: `${basePath}faq.html`, label: 'FAQ' },
       { href: `${basePath}contato.html`, label: 'Contato' },
     ];
@@ -212,7 +211,6 @@
             <a href="${basePath}sobre-o-doutor.html" class="footer-nav-link">Sobre o Doutor</a>
             <a href="${basePath}tratamentos.html" class="footer-nav-link">Tratamentos</a>
             <a href="${basePath}pacientes.html" class="footer-nav-link">Pacientes</a>
-            <a href="${basePath}blog.html" class="footer-nav-link">Blog</a>
             <a href="${basePath}faq.html" class="footer-nav-link">FAQ</a>
             <a href="${basePath}contato.html" class="footer-nav-link">Contato</a>
           </div>
