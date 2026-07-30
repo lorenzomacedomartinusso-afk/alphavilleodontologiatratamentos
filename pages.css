@@ -2396,14 +2396,18 @@ body.has-navbar {
   transform: translateY(0);
 }
 
-/* Push WhatsApp float up so it doesn't overlap sticky CTA */
-body.has-sticky-cta .whatsapp-float {
-  bottom: 90px !important;
-}
+@media (max-width: 1024px) {
+  /* Hide WhatsApp float when sticky CTA is active */
+  body.has-sticky-cta .whatsapp-float {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
 
-/* Push scroll-top button above WhatsApp when sticky CTA is active */
-body.has-sticky-cta .scroll-top-btn {
-  bottom: 155px !important;
+  /* Push scroll-top button above sticky CTA when active */
+  body.has-sticky-cta .scroll-top-btn {
+    bottom: 90px !important;
+  }
 }
 
 /* ============================================
