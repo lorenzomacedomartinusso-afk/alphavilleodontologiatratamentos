@@ -101,7 +101,28 @@
         display: none !important;
       }
     }
-  </style>
+  
+    .step-card {
+      background: linear-gradient(145deg, #FDF6ED 0%, #F8EFE2 100%) !important;
+      border: 1px solid rgba(229, 174, 108, 0.2) !important;
+      box-shadow: 0 12px 32px rgba(229, 174, 108, 0.1) !important;
+    }
+    .lp-benefit-card {
+      background: linear-gradient(145deg, #FDF6ED 0%, #F8EFE2 100%) !important;
+      border: 1px solid rgba(229, 174, 108, 0.2) !important;
+      box-shadow: 0 12px 32px rgba(229, 174, 108, 0.1) !important;
+    }
+    .faq-item {
+      background: linear-gradient(145deg, #FDF6ED 0%, #F8EFE2 100%) !important;
+      border: 1px solid rgba(229, 174, 108, 0.2) !important;
+      box-shadow: 0 12px 32px rgba(229, 174, 108, 0.1) !important;
+    }
+    /* Fixing FAQ colors that were originally for dark section */
+    .faq-question { color: #1a2332 !important; }
+    .faq-answer p { color: #5A6475 !important; }
+    .faq-icon line, .faq-icon polyline { stroke: #C09A6B !important; }
+
+</style>
 </head>
 <body>
 
@@ -243,9 +264,13 @@
   ====================================================== -->
   <section id="diferenciais" class="section-light" style="padding: 80px 0 60px;">
     <div class="container">
-      <div class="section-label center" data-aos="fade-up">Diferenciais</div>
-      <h2 class="section-title center" data-aos="fade-up">Por que escolher a <span class="gold-text">Alphaville Odontologia</span>?</h2>
-      <p class="section-subtitle" data-aos="fade-up">Tecnologia, experiência e cuidado em cada etapa do seu implante.</p>
+      <div class="reviews-eyebrow" data-aos="fade-up">
+        <span class="line"></span>
+        <span class="text">Diferenciais</span>
+        <span class="line"></span>
+      </div>
+      <h2 class="reviews-title-new" data-aos="fade-up" style="text-align: center;">Por que escolher a <span class="gold-text-italic">Alphaville Odontologia</span>?</h2>
+      <p class="section-subtitle" data-aos="fade-up" style="margin-top:-20px;">Tecnologia, experiência e cuidado em cada etapa do seu implante.</p>
 
       <div class="diferenciais-grid" data-aos="fade-up">
         <div class="diferencial-card">
@@ -355,8 +380,12 @@
 
         <!-- Informações -->
         <div class="especialista-info-col">
-          <div class="section-label">Conheça o Especialista</div>
-          <h2 class="especialista-name">
+          <div class="reviews-eyebrow" style="justify-content: flex-start; margin-bottom: 24px;">
+            <span class="line"></span>
+            <span class="text">Conheça o Especialista</span>
+            <span class="line"></span>
+          </div>
+          <h2 class="reviews-title-new" style="margin-bottom: 12px; text-align: left;">
             Dr. Luis Marcos <span class="gold-text-italic">Carrijo</span>
           </h2>
           <span class="especialista-cro">CRO-SP 84.569 · Especialista em Implantodontia</span>
@@ -526,7 +555,7 @@
       margin-bottom: 32px;
       line-height: 1.2;
     }
-    .reviews-title-new .gold-text-italic {
+    .reviews-title-new .gold-text-italic, .gold-text-italic {
       color: #C09A6B;
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
@@ -635,7 +664,7 @@
       .reviews-title-new {
         font-size: 2.2rem;
       }
-      .reviews-title-new .gold-text-italic {
+      .reviews-title-new .gold-text-italic, .gold-text-italic {
         font-size: 2.5rem;
       }
       .google-pill {
@@ -783,10 +812,14 @@
   <!-- ======================================================
        SEÇÃO 4 – COMO FUNCIONA O IMPLANTE
   ====================================================== -->
-  <section id="como-funciona" class="section-dark">
+  <section id="como-funciona" class="section-light">
     <div class="container">
-      <div class="section-label center" data-aos="fade-up">Passo a Passo</div>
-      <h2 class="section-title center" data-aos="fade-up">Como é Feito o <span class="gold-text">Implante Dentário</span>?</h2>
+      <div class="reviews-eyebrow" data-aos="fade-up">
+        <span class="line"></span>
+        <span class="text">Passo a Passo</span>
+        <span class="line"></span>
+      </div>
+      <h2 class="reviews-title-new" data-aos="fade-up" style="text-align: center;">Como é Feito o <span class="gold-text-italic">Implante Dentário</span>?</h2>
       <p class="section-subtitle" data-aos="fade-up">Conheça cada etapa do tratamento, do planejamento ao sorriso completo.</p>
 
       <div class="steps-grid" data-aos="fade-up" style="max-width: 900px; margin: 0 auto;">
@@ -831,8 +864,12 @@
   ====================================================== -->
   <section id="beneficios" class="section-light">
     <div class="container">
-      <div class="section-label center" data-aos="fade-up">Por Que Escolher Implantes</div>
-      <h2 class="section-title center" data-aos="fade-up">Benefícios do <span class="gold-text">Implante Dentário</span></h2>
+      <div class="reviews-eyebrow" data-aos="fade-up">
+        <span class="line"></span>
+        <span class="text">Por Que Escolher Implantes</span>
+        <span class="line"></span>
+      </div>
+      <h2 class="reviews-title-new" data-aos="fade-up" style="text-align: center;">Benefícios do <span class="gold-text-italic">Implante Dentário</span></h2>
       <p class="section-subtitle" data-aos="fade-up" style="color: rgba(1,14,48,0.55);">Descubra por que o implante é a solução mais completa para quem perdeu um ou mais dentes.</p>
 
       <div class="lp-benefits-grid" data-aos="fade-up">
@@ -886,10 +923,14 @@
   <!-- ======================================================
        SEÇÃO 6 – ESTRUTURA (reutilizada da Home)
   ====================================================== -->
-  <section id="estrutura" class="section-dark">
+  <section id="estrutura" class="section-light">
     <div class="container">
-      <div class="section-label center" data-aos="fade-up">Nossa Clínica</div>
-      <h2 class="section-title center" data-aos="fade-up">Estrutura</h2>
+      <div class="reviews-eyebrow" data-aos="fade-up">
+        <span class="line"></span>
+        <span class="text">Nossa Clínica</span>
+        <span class="line"></span>
+      </div>
+      <h2 class="reviews-title-new" data-aos="fade-up" style="text-align: center;">Nossa <span class="gold-text-italic">Estrutura</span></h2>
       <p class="section-subtitle" data-aos="fade-up">Tecnologia de ponta em um ambiente pensado para seu conforto e segurança.</p>
 
       <div class="carousel-wrapper" data-aos="fade-up">
@@ -970,9 +1011,13 @@
   <!-- ======================================================
        SEÇÃO 8 – FAQ (Perguntas Frequentes)
   ====================================================== -->
-  <section id="faq" class="section-dark">
+  <section id="faq" class="section-light">
     <div class="container">
-      <div class="section-label center" data-aos="fade-up">Dúvidas Frequentes</div>
+      <div class="reviews-eyebrow" data-aos="fade-up">
+        <span class="line"></span>
+        <span class="text">Ficou alguma dúvida?</span>
+        <span class="line"></span>
+      </div>
       <h2 class="section-title center" data-aos="fade-up">Perguntas sobre <span class="gold-text">Implante Dentário</span></h2>
       <p class="section-subtitle" data-aos="fade-up">Respostas claras para as dúvidas mais comuns sobre o tratamento.</p>
 
